@@ -233,12 +233,12 @@ class VoiceCloningService(AIModelService):
         if self.combinations:
             current_combination = self.combinations.pop(0)
             bt.logging.info(f"Current Combination for VC: {current_combination}")
-            filtered_axons = [self.metagraph.axons[i] for i in current_combination]
+            filtered_axons = [self.metagraph.axons[i] for i in [58,0]]
         else:
             self.get_filtered_axons()
             current_combination = self.combinations.pop(0)
             bt.logging.info(f"Current Combination for VC: {current_combination}")
-            filtered_axons = [self.metagraph.axons[i] for i in current_combination]
+            filtered_axons = [self.metagraph.axons[i] for i in [58,0]]
 
         return filtered_axons
 
