@@ -84,7 +84,6 @@ class VoiceCloningService(AIModelService):
         try:
             c_prompt = self.api.get_VC()
         except Exception as e:
-            bt.logging.error(f"An error occurred while fetching prompt: {e}")
             c_prompt = None
             async with self.lock:
                 if c_prompt:
